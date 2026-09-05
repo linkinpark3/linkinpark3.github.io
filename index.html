@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABC Tutoring</title>
 
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div>
+      <h1>ABC Tutoring</h1>
+      <p>Friendly, personalized tutoring to help every student succeed.</p>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h2>Find the right tutor for your student</h2>
+      <p>
+        Browse our tutors, view their availability, and book a session in just a few steps.
+      </p>
+    </section>
+
+    <section class="tutors-section">
+      <h2>Meet Our Tutors</h2>
+
+      <div id="tutor-list" class="tutor-grid">
+        <!-- Tutor cards will be added here with JavaScript -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Booking Modal -->
+  <div id="booking-modal" class="modal hidden">
+
+    <div class="modal-content">
+
+      <button id="close-modal" class="close-button">&times;</button>
+
+      <h2>Book a Tutoring Session</h2>
+
+      <p id="selected-tutor"></p>
+
+      <form id="booking-form">
+
+        <label for="parent-name">Parent's Name</label>
+        <input
+          type="text"
+          id="parent-name"
+          required
+        >
+
+        <label for="parent-email">Parent's Email</label>
+        <input
+          type="email"
+          id="parent-email"
+          required
+        >
+
+        <label for="student-name">Student's First Name</label>
+        <input
+          type="text"
+          id="student-name"
+          required
+        >
+
+        <label for="student-grade">Student's Grade</label>
+        <input
+          type="text"
+          id="student-grade"
+          required
+        >
+
+        <label for="subject">Subject</label>
+        <select id="subject" required></select>
+
+        <label for="time-slot">Available Date & Time</label>
+        <select id="time-slot" required></select>
+
+        <button type="submit" class="primary-button">
+          Confirm Booking
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- Booking Confirmation -->
+  <div id="confirmation" class="confirmation hidden">
+    <h2>You're booked! 🎉</h2>
+
+    <p>Your tutoring session has been confirmed.</p>
+
+    <p>
+      A confirmation has been sent to the parent and Dana has been notified.
+    </p>
+
+    <button id="close-confirmation" class="primary-button">
+      Done
+    </button>
+  </div>
+
+  <footer>
+    <p>© ABC Tutoring</p>
+    <p>Payment is handled separately through invoicing.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
